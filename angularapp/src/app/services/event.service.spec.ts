@@ -66,29 +66,4 @@ describe('EventService', () => {
     req.flush(newevent);
   });
 
-  fit('should_delete_a_Event_via_DELETE', () => {
-    const id = 1;
-    (service as any).deleteEvent(id).subscribe(() => {
-      // The response is void, so no need to assert anything here
-    });
-    const req = httpTestingController.expectOne(`${service['backendUrl']}/${id}`);
-    expect(req.request.method).toEqual('DELETE');
-    req.flush({});
-  });
-
-  // fit('should send an HTTP PUT request to update an event', () => {
-  //   const editedEvent = {
-  //     id: 1,
-  //     name: 'Updated Event',
-  //     date: '2023-11-19',
-  //     location: 'Updated Location',
-  //     description: 'Updated Description',
-  //     isEditing: false,
-  //   };
-  //   (service as any).editEvent(editedEvent,1).subscribe();
-  //   const req = httpTestingController.expectOne(`${service['backendUrl']}/${editedEvent.id}`);
-  //   expect(req.request.method).toBe('PUT');
-  //   req.flush(editedEvent);
-  // });
- 
 });

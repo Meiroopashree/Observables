@@ -5,21 +5,21 @@
       <th>Date</th>
       <th>Location</th>
       <th>Description</th>
-      <th>Actions</th>
+      <!-- <th>Actions</th> -->
     </tr>
   </thead>
-  <!-- <tbody>
+  <tbody>
     <ng-container *ngFor="let event of events">
       <tr *ngIf="!event.isEditing; else editRow">
         <td>{{ event.name }}</td>
         <td>{{ event.date }}</td>
         <td>{{ event.location }}</td>
         <td>{{ event.description }}</td>
-        <td>
+        <!-- <td>
           <button (click)="editEvent(event)">Edit</button>
           <button (click)="deleteEvent(event.id)">Delete</button>
         </td>
-      </tr>
+      </tr> -->
       <ng-template #editRow>
         <tr>
           <td><input [(ngModel)]="event.name" /></td>
@@ -33,5 +33,5 @@
         </tr>
       </ng-template>
     </ng-container>
-  </tbody> -->
+  </tbody>
 </table>

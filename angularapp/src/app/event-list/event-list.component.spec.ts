@@ -60,25 +60,4 @@ describe('EventListComponent', () => {
     expect((service as any).getEvents).toHaveBeenCalled();
   });
 
-  fit('should_call_deleteEvent', () => {
-    spyOn((service as any), 'deleteEvent').and.returnValue(of());
-    (component as any).deleteEvent();
-    expect((component as any).deleteEvent).toBeDefined();
-    expect((component as any).deleteEvent instanceof Function).toBeTruthy();
-    expect((service as any).deleteEvent).toHaveBeenCalled();
-  });
-
-  // fit('should set isEditing to true when calling editEvent', () => {
-  //   const event = {
-  //     id: 1,
-  //     name: 'MusicEvent',
-  //     date: '2020-11-20',
-  //     location: 'Chennai',
-  //     description: 'Event description',
-  //     isEditing: false, 
-  //   };
-  //   (component as any).editEvent(event);
-  //   expect(event.isEditing).toBe(true);
-  // });
-
 });

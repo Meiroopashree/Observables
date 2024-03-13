@@ -54,9 +54,9 @@ describe('AddeventComponent', () => {
       location: 'Chennai',
       description: 'Event description',
     };
-    spyOn((service as any), 'addEvent').and.returnValue(of(mockevent)); // Mock the addevent method
-    (component as any).eventForm.setValue(mockevent); // Set form values
-    (component as any).addNewEvent(); // Trigger the addNewevent method
+    spyOn((service as any), 'addEvent').and.returnValue(of(mockevent)); 
+    (component as any).eventForm.setValue(mockevent);
+    (component as any).addNewEvent();
     expect((component as any).eventForm.valid).toBeTruthy();
     expect(service['addEvent']).toHaveBeenCalledWith(mockevent);
   });
