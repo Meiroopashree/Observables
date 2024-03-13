@@ -1,0 +1,26 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Music",
+      "date": "2020-11-20",
+      "location": "Chennai",
+      "description": "Event description",
+      "isEditing": true
+    },
+    {
+      "id": 2,
+      "name": "Dance",
+      "date": "2020-11-20",
+      "location": "Mumbai",
+      "description": "Event description"
+    },
+    {
+      "id": 3,
+      "name": "Magic",
+      "date": "2020-11-20",
+      "location": "Bangalore",
+      "description": "Event description"
+    }
+  ]
+}
