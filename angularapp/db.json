@@ -21,6 +21,13 @@
       "date": "2020-11-20",
       "location": "Bangalore",
       "description": "Event description"
+    },
+    {
+      "name": "SINGING",
+      "date": "2021-12-12",
+      "location": "demo",
+      "description": "demo",
+      "id": 4
     }
   ]
 }

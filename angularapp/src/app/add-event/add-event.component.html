@@ -1,0 +1,51 @@
+<form [formGroup]="eventForm" (ngSubmit)="addNewEvent()">
+  <table>
+    <tr>
+      <td>Event Name :</td>
+      <td>
+        <input class="form-control" type="text" placeholder="Enter Name" formControlName="name" />
+        <div *ngIf="eventForm.get('name')?.hasError('required') && eventForm.get('name')?.touched">
+          <div class="error-message">Name is required.</div>
+        </div>
+        <div *ngIf="eventForm.get('name')?.hasError('minlength') && eventForm.get('name')?.touched">
+          <div class="error-message">Name should exceed 6 characters.</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Event Date:</td>
+      <td>
+        <input class="form-control" type="text" placeholder="Enter Date (yyyy-mm-dd)" formControlName="date" />
+        <div *ngIf="eventForm.get('date')!.invalid && eventForm.get('date')!.touched">
+          <div class="error-message" *ngIf="eventForm.get('date')!.hasError('required')">Date is required.</div>
+          <div class="error-message" *ngIf="eventForm.get('date')!.hasError('pattern')">Invalid date format (yyyy-mm-dd).</div>
+          <div class="error-message" *ngIf="eventForm.get('date')!.hasError('monthOutOfRange')">Month should not exceed 12.</div>
+          <div class="error-message" *ngIf="eventForm.get('date')!.hasError('dayOutOfRange')">Day should not exceed 31.</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Event Location:</td>
+      <td>
+        <input class="form-control" type="text" placeholder="Enter Location" formControlName="location" />
+        <div *ngIf="eventForm.get('location')?.hasError('required') && eventForm.get('location')?.touched">
+          <div class="error-message">Location is required.</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Event Description:</td>
+      <td>
+        <input class="form-control" type="text" placeholder="Enter Description" formControlName="description" />
+        <div *ngIf="eventForm.get('description')?.hasError('required') && eventForm.get('description')?.touched">
+          <div class="error-message">Description is required.</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button class="btn btn-danger" type="submit" [disabled]="eventForm.invalid"><b>Add Event</b></button>
+      </td>
+    </tr>
+  </table>
+</form>

@@ -1,0 +1,69 @@
+/* styles.css (or your preferred CSS file) */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+form {
+  /* width: 300px; */
+  width: 50%;
+  margin-left: 350px;
+  background-color: #fff; /* White background color for the form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* tr, td {
+  border: 1px solid #ddd; /* Light gray border for table cells */
+
+td {
+  padding: 10px;
+}
+
+input {
+  width: calc(100% - 20px); /* Full width minus padding for a smaller input box */
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px; /* Add some space between input and button */
+}
+
+.btn {
+  background-color: #d9534f; /* Red background color for the button */
+  color: #fff; /* White text color */
+  width: 100%; /* Full width button */
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:disabled {
+  background-color: #ccc; /* Light gray background color for disabled button */
+  cursor: not-allowed;
+}
+
+/* Add red color for validation messages */
+.error-mesage{
+  color: red;
+  font-size: 14px;
+}
